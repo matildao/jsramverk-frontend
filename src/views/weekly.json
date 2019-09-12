@@ -1,0 +1,20 @@
+{
+    "Reports": {
+        "week1": [
+            "npm run build",
+            "Run your tests",
+            "npm run test Lints and fixes files",
+            "npm run lint"
+        ],
+        "week2": [
+            "Jag fick inspirationen till mitt forms genom att kolla in forms när man googlar på dem. Jag hämtar ofta idéer på det sättet då det gäller att samla så många idéer som möjligt och sedan försöka skapa något eget av det. Jag har också arbetat med mycket forms under sommaren på mitt sommarjobb och det bidrog till mycket inspiration. Eftersom att jag använder mig av material vue som är ett css-ramverk till Vue så har jag använt deras form som en bas för mitt och sedan ändrat mitt för att det ska smälta in.",
+            "För datepickern använde jag mig av material ui react & vanliga date picker html taggar som inspiration för när jag skapade min. Det jag önskar att jag kunde komma på är hur de har skapat sin input/knapp när man väljer datumet man ska inkrementera. Det var något jag därför valde att skippa.",
+            "Jag övervägde även möjligheterna till en select för just year eftersom att det input-fältet är väldigt långt och går från 1900 till 2019. Det går dock hyfsat snabbt att ändra år om man skulle jämföra med en select för att select-listan blir så lång."
+        ],
+        "week3": [],
+        "week4": [],
+        "week5": [],
+        "week6": [],
+        "github": "https://github.com/Maoo17/ramerk2"
+    }
+}
