@@ -42,24 +42,28 @@
       <md-snackbar class="snackbar" :md-active.sync="userLogin">Successfully logged in!</md-snackbar>
       <md-snackbar
         class="snackbar-error"
-        :md-active.sync="notAgreed"
+        :md-active.sync="notValid"
       >Wrong password or email address!</md-snackbar>
     </form>
   </div>
 </template>
 
 <script>
+import { login } from "../actions/user";
+import axios from "axios";
+const api_url = process.env.VUE_APP_APIBASE;
+
 export default {
   name: "LoginForm",
   data: () => ({
     form: {
-      password: null,
-      email: null
+      email: null,
+      password: null
     },
     userLogin: false,
     sending: false,
     lastUser: null,
-    notAgreed: false
+    notValid: false
   }),
   methods: {
     getValidationClass(fieldName) {
@@ -72,17 +76,22 @@ export default {
       }
     },
     loginUser() {
-      this.userLogin = true;
+      login(this.form).then(res => {
+        if (res.valid === true) {
+          this.userLogin = true;
+        } else {
+          this.notValid = true;
+        }
+      });
     },
     validateUser() {
-      this.$v.$touch();
-      let checkbox = document.getElementById("terms");
+      // this.$v.$touch();
 
-      if (!this.$v.$invalid && checkbox.checked === true) {
-        this.saveUser();
-      } else {
-        this.notAgreed = true;
-      }
+      // if (!this.$v.$invalid && checkbox.checked === true) {
+      this.loginUser();
+      // } else {
+      //   this.notAgreed = true;
+      // }
     }
   }
 };
