@@ -1,4 +1,4 @@
-# ramverk2
+# JsRamverk - Frontend
 
 ## Project setup
 ```
