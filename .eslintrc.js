@@ -1,23 +1,12 @@
 module.exports = {
   root: true,
-  parserOptions: {
-    sourceType: 'module',
-    parser: 'babel-eslint',
-  },
-  env: {
-    browser: true,
-  },
-  extends: ['prettier', 'prettier/standard', 'plugin:vue/recommended'],
-  plugins: ['vue', 'prettier'],
-  // rules: {
-  //   indent: ['error', 2],
-  // },
-  // overrides: [
-  //   {
-  //     files: ['*.vue'],
-  //     rules: {
-  //       indent: 'off',
-  //     },
-  //   },
-  // ],
+  env: { node: true },
+  plugins: ["es-beautifier"],
+  extends: ["plugin:vue/essential", "plugin:es-beautifier/standard"],
+  rules: {
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "comma-dangle": ["error", "never"],
+    "linebreak-style": "off"
+  }
 };
