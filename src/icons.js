@@ -4,6 +4,12 @@ import {
   faFish as fasFish,
   faPhoneAlt as fasPhoneAlt,
   faEnvelope as fasEnvelope,
+  faPen as fasPen,
+  faAngleRight as fasAngleRight,
+  faChevronLeft as fasChevronLeft,
+  faSave as fasSave,
+  faTrashAlt as fasTrashAlt,
+  faUserCircle as fasUserCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -23,4 +29,10 @@ export default {
   fabGithubSquare,
   fasPhoneAlt,
   fasEnvelope,
+  fasPen,
+  fasAngleRight,
+  fasChevronLeft,
+  fasSave,
+  fasTrashAlt,
+  fasUserCircle,
 };

@@ -33,6 +33,7 @@ export default {
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
   background-color: hsl(0, 0%, 84%);
 }
 

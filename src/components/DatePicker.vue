@@ -55,14 +55,14 @@ var finalDate = "";
 
 export default {
   props: {
-    sendDataToParent: { type: Function }
+    sendDataToParent: { type: Function, default: Function }
   },
   data() {
     return {
       date: 1,
       month: months[0],
       year: 2019,
-      choose: ""
+      choose: "date"
     };
   },
   created() {

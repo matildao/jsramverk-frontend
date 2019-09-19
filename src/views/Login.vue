@@ -11,6 +11,9 @@ import LoginForm from "../components/LoginForm";
 export default {
   components: {
     LoginForm
+  },
+  mounted() {
+    scroll(0, 0);
   }
 };
 </script>

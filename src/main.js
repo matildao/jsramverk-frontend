@@ -6,11 +6,12 @@ import fontawesomeIcons from './icons';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import 'vue-material/dist/vue-material.min.css';
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
-import Vuelidate from 'vuelidate'
+import Vuelidate from 'vuelidate';
+require ('dotenv').config ();
 
 library.add (fontawesomeIcons);
 Vue.component ('font-awesome-icon', FontAwesomeIcon);
-Vue.use(Vuelidate)
+Vue.use (Vuelidate);
 Vue.use (VueMaterial);
 Vue.config.productionTip = false;
 

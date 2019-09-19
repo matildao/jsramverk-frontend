@@ -13,15 +13,30 @@
       <div class="introduction">
         <img class="profile-img" src="../assets/me.jpg" alt />
         <div class="profile-text">
-          Jag heter Matilda och går webbprogrammering år 3 på Blekinge Tekniska Högskola. Jag är från Stockholm och ska nog till flytta vidare till Göteborg sen. Det jag gillar mest med den här kursen är att jag får arbeta med javascript-ramverk och förhoppningsvis får fria val i hur min hemsida ska se ut.
-          Den här hemsidan är skriven med hjälp av javascript ramverket Vue tillsammans med ett designramverk som heter Material ui för Vue. Jag har tidigare jobbat med React tillsammans med Material UI, men ville bredda mina vyer samtidigt som jag använde mig av något familjärt och då blev det Material ui vue och vue.
-          På fritiden arbetar jag mycket med idéella föreningar som t.ex. Sexmästeriet på BTH (tidigare) samt arrangerar lan med WonderLAN Mammas Källare spelförening. Där är jag PR-ansvarig och skapar allt det grafiska som används vid lanen samt sköter de sociala medierna.
+          Jag heter Matilda och går webbprogrammering år 3 på Blekinge Tekniska
+          Högskola. Jag är från Stockholm och ska nog till flytta vidare till
+          Göteborg sen. Det jag gillar mest med den här kursen är att jag får
+          arbeta med javascript-ramverk och förhoppningsvis får fria val i hur
+          min hemsida ska se ut. Den här hemsidan är skriven med hjälp av
+          javascript ramverket Vue tillsammans med ett designramverk som heter
+          Material ui för Vue. Jag har tidigare jobbat med React tillsammans med
+          Material UI, men ville bredda mina vyer samtidigt som jag använde mig
+          av något familjärt och då blev det Material ui vue och vue. På
+          fritiden arbetar jag mycket med idéella föreningar som t.ex.
+          Sexmästeriet på BTH (tidigare) samt arrangerar lan med WonderLAN
+          Mammas Källare spelförening. Där är jag PR-ansvarig och skapar allt
+          det grafiska som används vid lanen samt sköter de sociala medierna.
         </div>
       </div>
       <div class="text">
-        <div
-          class="fish-text"
-        >Ett av mina senaste intressen är akvaristik. Jag har intresserat mig för nanoakvarium dels för att jag inte har mycket plats i min lilla etta och dels för att det är intressanta miljöer i nanoakvarium. Jag har då snöat in mig på Betta splendens som är en typ av fisk som ockaså kallas ”Kampfisk”. Min senaste fisk är på bilden till höger och heter Bob och han är en blå plakathane.</div>
+        <div class="fish-text">
+          Ett av mina senaste intressen är akvaristik. Jag har intresserat mig
+          för nanoakvarium dels för att jag inte har mycket plats i min lilla
+          etta och dels för att det är intressanta miljöer i nanoakvarium. Jag
+          har då snöat in mig på Betta splendens som är en typ av fisk som
+          ockaså kallas ”Kampfisk”. Min senaste fisk är på bilden till höger och
+          heter Bob och han är en blå plakathane.
+        </div>
         <img class="fish-img" src="../assets/fisk.jpg" alt />
       </div>
     </div>
@@ -29,8 +44,6 @@
 </template>
 
 <script>
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
   name: "home",
   components: {}

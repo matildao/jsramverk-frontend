@@ -83,7 +83,10 @@
             <md-dialog class="info-dialog" :md-active.sync="dialogIsOpen">
               <md-dialog-title>Privacy Policy</md-dialog-title>
               <div class="info-dialog-content">
-                <p>By agreeing to this policy you consent for this website to use your information in any way that fits the website owner.</p>
+                <p>
+                  By agreeing to this policy you consent for this website to use
+                  your information in any way that fits the website owner.
+                </p>
                 <md-dialog-actions>
                   <md-button class="md-primary" @click="checkBox(true)">I agree</md-button>
                   <md-button class="md-primary" @click="checkBox(false)">Disagree</md-button>
@@ -113,6 +116,10 @@
       <md-snackbar class="snackbar" :md-active.sync="userSaved">You have registered successfully!</md-snackbar>
       <md-snackbar
         class="snackbar-error"
+        :md-active.sync="emailAlreadyExist"
+      >This email is already registered!</md-snackbar>
+      <md-snackbar
+        class="snackbar-error"
         :md-active.sync="notAgreed"
       >Fill in the form correctly & agree to our policy</md-snackbar>
     </form>
@@ -121,13 +128,9 @@
 
 <script>
 import DatePicker from "../components/DatePicker";
+import { register } from "../actions/user";
 import { validationMixin } from "vuelidate";
-import {
-  required,
-  email,
-  minLength,
-  maxLength
-} from "vuelidate/lib/validators";
+import { required, email } from "vuelidate/lib/validators";
 
 export default {
   name: "RegisterForm",
@@ -148,7 +151,8 @@ export default {
     userSaved: false,
     sending: false,
     lastUser: null,
-    notAgreed: false
+    notAgreed: false,
+    emailAlreadyExist: false
   }),
   methods: {
     getValidationClass(fieldName) {
@@ -173,7 +177,13 @@ export default {
       this.dialogIsOpen = false;
     },
     saveUser() {
-      this.userSaved = true;
+      register(this.form).then(res => {
+        if (res.status === 200) {
+          this.userSaved = true;
+        } else {
+          this.emailAlreadyExist = true;
+        }
+      });
     },
     validateUser() {
       this.$v.$touch();
