@@ -19,8 +19,14 @@
                   :disabled="sending"
                   :class="{ error: $v.form.firstName.$error }"
                 />
-                <span class="md-error" v-if="!$v.form.firstName.required">The first name is required</span>
-                <span class="md-error" v-else-if="!$v.form.firstName.minlength">Invalid first name</span>
+                <span
+                  class="md-error"
+                  v-if="!$v.form.firstName.required"
+                >The first name is required</span>
+                <span
+                  class="md-error"
+                  v-else-if="!$v.form.firstName.minlength"
+                >Invalid first name</span>
               </md-field>
             </div>
 
@@ -51,8 +57,14 @@
                   :disabled="sending"
                   :class="{ error: $v.form.email.$error }"
                 />
-                <span class="md-error" v-if="!$v.form.email.required">The email is required</span>
-                <span class="md-error" v-else-if="!$v.form.email.email">Invalid email</span>
+                <span
+                  class="md-error"
+                  v-if="!$v.form.email.required"
+                >The email is required</span>
+                <span
+                  class="md-error"
+                  v-else-if="!$v.form.email.email"
+                >Invalid email</span>
               </md-field>
             </div>
             <div class="md-layout-item md-small-size-100">
@@ -67,8 +79,14 @@
                   :disabled="sending"
                   :class="{ error: $v.form.password.$error }"
                 />
-                <span class="md-error" v-if="!$v.form.password.required">The password is required</span>
-                <span class="md-error" v-else-if="!$v.form.password.password">Invalid password</span>
+                <span
+                  class="md-error"
+                  v-if="!$v.form.password.required"
+                >The password is required</span>
+                <span
+                  class="md-error"
+                  v-else-if="!$v.form.password.password"
+                >Invalid password</span>
               </md-field>
             </div>
           </div>
@@ -89,7 +107,10 @@
                 </p>
                 <md-dialog-actions>
                   <md-button class="md-primary" @click="checkBox(true)">I agree</md-button>
-                  <md-button class="md-primary" @click="checkBox(false)">Disagree</md-button>
+                  <md-button
+                    class="md-primary"
+                    @click="checkBox(false)"
+                  >Disagree</md-button>
                 </md-dialog-actions>
               </div>
             </md-dialog>
@@ -109,11 +130,18 @@
         <md-progress-bar md-mode="indeterminate" v-if="sending" />
 
         <md-card-actions>
-          <md-button type="submit" class="submit-button md-primary" :disabled="sending">Register</md-button>
+          <md-button
+            type="submit"
+            class="submit-button md-primary"
+            :disabled="sending"
+          >Register</md-button>
         </md-card-actions>
       </md-card>
 
-      <md-snackbar class="snackbar" :md-active.sync="userSaved">You have registered successfully!</md-snackbar>
+      <md-snackbar
+        class="snackbar"
+        :md-active.sync="userSaved"
+      >You have registered successfully!</md-snackbar>
       <md-snackbar
         class="snackbar-error"
         :md-active.sync="emailAlreadyExist"
@@ -177,7 +205,7 @@ export default {
       this.dialogIsOpen = false;
     },
     saveUser() {
-      register(this.form).then(res => {
+      register(this.form).then((res) => {
         if (res.status === 200) {
           this.userSaved = true;
         } else {
@@ -217,71 +245,71 @@ export default {
 </script>
 
 <style scoped>
-form {
-  width: 85%;
-  margin: 2em;
-  margin-bottom: 15em;
-}
+  form {
+    width: 85%;
+    margin: 2em;
+    margin-bottom: 15em;
+  }
 
-.register-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.form {
-  background-color: white;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 6em;
-  border-radius: 5px;
-}
+  .register-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .form {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6em;
+    border-radius: 5px;
+  }
 
-.md-input {
-  border-bottom: 1px solid rgb(173, 173, 173);
-}
+  .md-input {
+    border-bottom: 1px solid rgb(173, 173, 173);
+  }
 
-.submit-button {
-  width: 100%;
-  background-color: #dd7373;
-}
+  .submit-button {
+    width: 100%;
+    background-color: #dd7373;
+  }
 
-.info-dialog {
-  background-color: white;
-  width: 400px;
-  border-radius: 5px;
-}
+  .info-dialog {
+    background-color: white;
+    width: 400px;
+    border-radius: 5px;
+  }
 
-.info-dialog-content {
-  padding: 1em;
-  border-top: 1px solid rgb(180, 180, 180);
-}
+  .info-dialog-content {
+    padding: 1em;
+    border-top: 1px solid rgb(180, 180, 180);
+  }
 
-.info-checkbox {
-  border-color: palevioletred;
-}
+  .info-checkbox {
+    border-color: palevioletred;
+  }
 
-.info-button {
-  margin-top: -0.5em;
-}
+  .info-button {
+    margin-top: -0.5em;
+  }
 
-.agree-field {
-  margin-top: 4em;
-}
+  .agree-field {
+    margin-top: 4em;
+  }
 
-.md-error {
-  color: red;
-}
+  .md-error {
+    color: red;
+  }
 
-.error {
-  border-bottom: 1px solid red;
-}
+  .error {
+    border-bottom: 1px solid red;
+  }
 
-.snackbar {
-  background-color: rgb(68, 209, 63);
-  bottom: 0;
-}
-.snackbar-error {
-  background-color: #ec3b3b;
-  bottom: 0;
-}
+  .snackbar {
+    background-color: rgb(68, 209, 63);
+    bottom: 0;
+  }
+  .snackbar-error {
+    background-color: #ec3b3b;
+    bottom: 0;
+  }
 </style>

@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test": "vue-cli-service test:unit",
+    "deploy": "npm run build && rsync -av dist/* deploy@68.183.66.92:/var/www/me.maols.se/html/"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.22",

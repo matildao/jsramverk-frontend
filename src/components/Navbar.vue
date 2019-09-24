@@ -21,8 +21,12 @@
                 size="2x"
               />
             </md-button>
-            <router-link to="/login">Login |</router-link>
-            <router-link class="signup" to="/register">Signup</router-link>
+            <md-button class="login" id="toLoginPage" @click="toLogin()">Login</md-button>
+            <md-button
+              class="signup"
+              to="/register"
+              @click="toRegister()"
+            >Signup</md-button>
           </div>
         </div>
       </div>
@@ -80,6 +84,14 @@ export default {
   },
   mounted() {
     // console.log(localStorage);
+  },
+  methods: {
+    toLogin() {
+      window.location.assign("/login");
+    },
+    toRegister() {
+      window.location.assign("/register");
+    }
   }
 };
 </script>
@@ -172,7 +184,23 @@ export default {
   }
 
   .signup {
-    margin-left: 0.2em;
+    background-color: transparent;
+    border: none;
+    height: 1em;
+    min-height: 0;
+  }
+
+  .login {
+    background-color: transparent;
+    border: none;
+    height: 1em;
+    min-height: 0;
+    margin-right: 0;
+  }
+
+  .md-button {
+    min-width: 0;
+    width: 3.8em;
   }
 
   @media only screen and (max-width: 600px) {

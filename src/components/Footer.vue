@@ -31,7 +31,7 @@
     </div>
 
     <div class="lower-footer-content">
-      <div></div>Copyright © 2019 Matilda Olsson
+      <div>Copyright © 2019 Matilda Olsson</div>
     </div>
   </div>
 </template>
