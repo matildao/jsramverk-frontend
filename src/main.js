@@ -12,7 +12,7 @@ import VueSocketIO from 'vue-socket.io'
 
 Vue.use(new VueSocketIO({
   debug: true,
-  connection: 'http://localhost:8333',
+  connection: process.env.VUE_APP_APIBASE,
   vuex: {
     actionPrefix: 'SOCKET_',
     mutationPrefix: 'SOCKET_'
