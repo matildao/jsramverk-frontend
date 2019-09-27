@@ -1,6 +1,10 @@
 <template>
   <div>
-    <md-dialog class="dialog" :md-active.sync="showDialog">
+    <md-dialog
+      :md-fullscreen="false"
+      class="dialog"
+      :md-active.sync="showDialog"
+    >
       <form novalidate class="md-layout form" @submit.prevent="createReport">
         <md-card class="card md-layout-item md-size-100 md-small-size-100">
           <md-card-header>

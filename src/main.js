@@ -8,9 +8,17 @@ import 'vue-material/dist/vue-material.min.css';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vuelidate from 'vuelidate';
 require('dotenv').config();
+import VueSocketIO from 'vue-socket.io'
 
-// export const bus = new Vue();
-
+Vue.use(new VueSocketIO({
+  debug: true,
+  connection: 'http://localhost:8333',
+  vuex: {
+    actionPrefix: 'SOCKET_',
+    mutationPrefix: 'SOCKET_'
+  }
+  // options: { path: "/my-app/" } // Optional options
+}))
 
 library.add(fontawesomeIcons);
 Vue.component('font-awesome-icon', FontAwesomeIcon);

@@ -76,6 +76,10 @@ export default {
         {
           text: "Reports",
           page: "/reports"
+        },
+        {
+          text: "Chat",
+          page: "/chat"
         }
       ],
       showNavigation: false,
@@ -105,7 +109,7 @@ export default {
     flex-direction: row;
     background-color: #fff7f5;
     height: 4em;
-    z-index: 5;
+    z-index: 6;
     position: fixed;
     width: 100%;
   }

@@ -51,145 +51,145 @@ export default {
 </script>
 
 <style scoped>
-.home {
-  background-image: url("../assets/foggy.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  height: 58em;
-}
-
-.home-content {
-  transition-delay: 2s;
-  min-height: 70em;
-}
-
-.md-content {
-  max-width: 400px;
-  max-height: 200px;
-  overflow: auto;
-}
-
-.paralax-box {
-  margin: 0;
-  position: absolute;
-  font-size: 32px;
-  top: 20em;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 9em;
-  text-align: center;
-}
-
-.arrow-icon {
-  color: white;
-  animation: bounce 1s ease-in-out infinite;
-}
-
-.arrow-button {
-  transition-delay: 2s;
-}
-
-.introduction {
-  margin-top: 2em;
-  margin-left: 6em;
-  display: flex;
-  flex-direction: row;
-}
-
-.profile-img {
-  border-radius: 50%;
-  width: 300px;
-  margin-right: 2em;
-  transition: transform 1s;
-}
-
-.profile-img:hover {
-  transform: scale(1.1);
-}
-
-.profile-text {
-  margin-top: 5em;
-  width: 60%;
-}
-
-.empty-tag {
-  height: 10em;
-}
-
-.text {
-  background-color: #f8f8f8;
-  height: 15em;
-  display: flex;
-  flex-direction: row;
-  margin-top: 8em;
-  height: 30em;
-}
-
-.fish-img {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  margin-right: 2em;
-  margin-top: 6em;
-  transition: transform 1s;
-  margin: auto;
-  margin-top: 8em;
-}
-
-.fish-img:hover {
-  transform: scale(1.1);
-}
-
-.fish-text {
-  width: 60%;
-  margin: auto;
-  margin-top: 8em;
-}
-
-.register {
-  margin-top: 5em;
-  margin-left: 80em;
-  width: 200px;
-  background-color: white;
-}
-
-@media only screen and (max-width: 600px) {
-  .introduction {
-    flex-direction: column;
-    margin: 3em;
-  }
-
-  .profile-img {
-    width: 200px;
-  }
-
-  .profile-text {
-    width: 100%;
-  }
-
-  .text {
-    flex-direction: column;
+  .home {
+    background-image: url("../assets/foggy.jpg");
+    background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
   }
 
-  .fish-img {
-    width: 200px;
+  .home-content {
+    transition-delay: 2s;
+    min-height: 70em;
+  }
+
+  .md-content {
+    max-width: 400px;
+    max-height: 200px;
+    overflow: auto;
+  }
+
+  .paralax-box {
+    margin: 0;
+    position: absolute;
+    font-size: 32px;
+    top: 20em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9em;
+    text-align: center;
+  }
+
+  .arrow-icon {
+    color: white;
+    animation: bounce 1s ease-in-out infinite;
+  }
+
+  .arrow-button {
+    transition-delay: 2s;
+  }
+
+  .introduction {
     margin-top: 2em;
+    margin-left: 6em;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .profile-img {
+    border-radius: 50%;
+    width: 300px;
+    margin-right: 2em;
+    transition: transform 1s;
+  }
+
+  .profile-img:hover {
+    transform: scale(1.1);
+  }
+
+  .profile-text {
+    margin-top: 5em;
+    width: 60%;
+  }
+
+  .empty-tag {
+    height: 10em;
+  }
+
+  .text {
+    background-color: #f8f8f8;
+    height: 15em;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8em;
+    height: 30em;
+  }
+
+  .fish-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-right: 2em;
+    margin-top: 6em;
+    transition: transform 1s;
+    margin: auto;
+    margin-top: 8em;
+  }
+
+  .fish-img:hover {
+    transform: scale(1.1);
   }
 
   .fish-text {
-    width: 70%;
-  }
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translate(0, 0);
+    width: 60%;
+    margin: auto;
+    margin-top: 8em;
   }
 
-  50% {
-    transform: translate(0, 5px);
+  .register {
+    margin-top: 5em;
+    margin-left: 80em;
+    width: 200px;
+    background-color: white;
   }
-}
+
+  @media only screen and (max-width: 600px) {
+    .introduction {
+      flex-direction: column;
+      margin: 3em;
+    }
+
+    .profile-img {
+      width: 200px;
+    }
+
+    .profile-text {
+      width: 100%;
+    }
+
+    .text {
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .fish-img {
+      width: 200px;
+      margin-top: 2em;
+    }
+
+    .fish-text {
+      width: 70%;
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+
+    50% {
+      transform: translate(0, 5px);
+    }
+  }
 </style>
